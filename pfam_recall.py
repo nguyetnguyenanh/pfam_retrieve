@@ -11,7 +11,7 @@ def search_protein_family(pfam_code):
 
     if response.ok:
         soup = BeautifulSoup(response.text, 'html.parser')
-        protein_family_element = soup.find("div.desctit")
+        protein_family_element = soup.find("span")
         
         if protein_family_element is not None:
             protein_family_name = protein_family_element.text.strip()
